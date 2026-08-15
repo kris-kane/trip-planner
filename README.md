@@ -4,6 +4,8 @@ Waypoint is a tool-calling AI agent that plans trips through conversation: it se
  
 It's built end-to-end on Databricks: a medallion-architecture Spark pipeline feeds a vector search table, an LLM agent orchestrates five tools against that data, and a Flask app exposes it all through a chat interface.
 
+![Waypoint UI](./screenshot.png)
+
 ## How it works
 **Data pipeline (`notebooks/`):** Five destinations are geocoded, then enriched with live weather/air-quality readings and Wikipedia summaries pulled from the GeoNames API. Bronze tables land the raw API responses as-is; silver tables join and clean them into an analytics-ready shape.
  
